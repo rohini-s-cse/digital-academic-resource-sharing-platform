@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Department</title>
+
+<link rel="stylesheet" href="/deptHome.css">
+
+</head>
+
+<body>
+
+<div class="dept-container">
+
+<h1 id="deptTitle">Department</h1>
+<p>Select what you want to access</p>
+
+<div class="dept-options">
+
+<a id="notesLink" class="card">
+📚
+<h3>Notes</h3>
+<p>View all subject notes</p>
+</a>
+
+<a id="questionsLink" class="card">
+📝
+<h3>Question Papers</h3>
+<p>View previous exam papers</p>
+</a>
+
+</div>
+
+<a href="/dashboard">⬅ Back to Dashboard</a>
+
+</div>
+
+<script>
+
+const path = window.location.pathname.split("/");
+const dept = path[1];
+
+document.getElementById("deptTitle").innerText = dept.toUpperCase() + " Department";
+
+document.getElementById("notesLink").href = "/" + dept + "/notes";
+document.getElementById("questionsLink").href = "/" + dept + "/questions";
+
+</script>
+
+</body>
+</html>
