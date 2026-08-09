@@ -1,0 +1,144 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  background: linear-gradient(120deg, #74ebd5, #ACB6E5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login Page Container */
+.login-page {
+  display: flex;
+  width: 90%;
+  max-width: 1000px;
+  height: 600px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: white;
+}
+
+/* Left Illustration */
+.login-left {
+  flex: 1;
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-left img {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Right Form */
+.login-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+}
+
+.login-card {
+  width: 80%;
+}
+
+.login-card h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.login-card p {
+  text-align: center;
+  color: #7f8c8d;
+  margin-bottom: 30px;
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login-card input {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.login-card input:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 10px rgba(52,152,219,0.4);
+}
+
+.login-card button {
+  padding: 12px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-card button:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.signup-text {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.signup-text a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .login-page {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .login-left, .login-right {
+    width: 100%;
+    flex: none;
+  }
+
+  .login-left img {
+    width: 60%;
+    margin: 20px auto;
+  }
+
+  .login-card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+
